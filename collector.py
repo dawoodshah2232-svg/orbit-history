@@ -101,7 +101,7 @@ def main():
 
     if st["runs"] % PUSH_EVERY == 0:
         rc = os.system(
-            f"cd {BASE} && git add -A -q && "
+            f"cd {BASE} && git add -A && "
             f"git -c user.email=relay@orbithub -c user.name=orbithistory-relay "
             f"commit -qm 'ticks' 2>/dev/null; git push -q origin gh-pages 2>&1 | tail -1"
         )
