@@ -90,3 +90,12 @@
 2026-09-29 15:54:39 USDCAD fetch failed: <urlopen error timed out>
 2026-09-29 15:54:39 NZDUSD fetch failed: <urlopen error timed out>
 2026-09-29 15:55:09 NZDUSD fetch failed: <urlopen error timed out>
+2026-09-29 16:08:02 XAUUSD fetch failed: <urlopen error [Errno 111] Connection refused>
+2026-09-29 16:08:02 XAGUSD fetch failed: <urlopen error [Errno 111] Connection refused>
+2026-09-29 16:08:02 EURUSD fetch failed: <urlopen error [Errno 111] Connection refused>
+2026-09-29 16:08:02 GBPUSD fetch failed: <urlopen error [Errno 111] Connection refused>
+2026-09-29 16:08:02 USDJPY fetch failed: <urlopen error [Errno 111] Connection refused>
+2026-09-29 16:08:02 USDCHF fetch failed: <urlopen error [Errno 111] Connection refused>
+2026-09-29 16:08:02 AUDUSD fetch failed: <urlopen error [Errno 111] Connection refused>
+2026-09-29 16:08:02 USDCAD fetch failed: <urlopen error [Errno 111] Connection refused>
+2026-09-29 16:08:02 NZDUSD fetch failed: <urlopen error [Errno 111] Connection refused>
