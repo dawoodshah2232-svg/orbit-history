@@ -47,3 +47,14 @@
 2026-09-29 12:20:20 XAGUSD fetch failed: Remote end closed connection without response
 2026-09-29 12:43:49 EURUSD fetch failed: Remote end closed connection without response
 2026-09-29 12:55:20 USDJPY fetch failed: Remote end closed connection without response
+2026-09-29 13:17:22 EURUSD fetch failed: Remote end closed connection without response
+2026-09-29 13:18:49 XAUUSD fetch failed: <urlopen error [Errno 111] Connection refused>
+2026-09-29 13:18:49 XAGUSD fetch failed: <urlopen error [Errno 111] Connection refused>
+2026-09-29 13:18:49 EURUSD fetch failed: <urlopen error [Errno 111] Connection refused>
+2026-09-29 13:18:49 GBPUSD fetch failed: <urlopen error [Errno 111] Connection refused>
+2026-09-29 13:18:49 USDJPY fetch failed: <urlopen error [Errno 111] Connection refused>
+2026-09-29 13:18:49 USDCHF fetch failed: <urlopen error [Errno 111] Connection refused>
+2026-09-29 13:18:49 AUDUSD fetch failed: <urlopen error [Errno 111] Connection refused>
+2026-09-29 13:18:49 USDCAD fetch failed: <urlopen error [Errno 111] Connection refused>
+2026-09-29 13:18:49 NZDUSD fetch failed: <urlopen error [Errno 111] Connection refused>
+2026-09-29 13:20:44 EURUSD fetch failed: Remote end closed connection without response
