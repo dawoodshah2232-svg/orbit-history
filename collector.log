@@ -226,3 +226,21 @@
 2026-09-29 19:16:39 USDCHF fetch failed: Remote end closed connection without response
 2026-09-29 19:18:08 NZDUSD fetch failed: Remote end closed connection without response
 2026-09-29 20:35:14 XAGUSD fetch failed: Remote end closed connection without response
+2026-09-29 20:57:12 XAUUSD stale quote (128s old), skipped
+2026-09-29 20:57:12 XAGUSD stale quote (128s old), skipped
+2026-09-29 20:57:12 EURUSD stale quote (128s old), skipped
+2026-09-29 20:57:12 GBPUSD stale quote (128s old), skipped
+2026-09-29 20:57:12 USDJPY stale quote (128s old), skipped
+2026-09-29 20:57:12 USDCHF stale quote (128s old), skipped
+2026-09-29 20:57:12 AUDUSD stale quote (128s old), skipped
+2026-09-29 20:57:12 USDCAD stale quote (128s old), skipped
+2026-09-29 20:57:12 NZDUSD stale quote (128s old), skipped
+2026-09-29 20:57:22 XAUUSD stale quote (139s old), skipped
+2026-09-29 20:57:22 XAGUSD stale quote (139s old), skipped
+2026-09-29 20:57:22 EURUSD stale quote (139s old), skipped
+2026-09-29 20:57:22 GBPUSD stale quote (139s old), skipped
+2026-09-29 20:57:22 USDJPY stale quote (139s old), skipped
+2026-09-29 20:57:22 USDCHF stale quote (139s old), skipped
+2026-09-29 20:57:22 AUDUSD stale quote (139s old), skipped
+2026-09-29 20:57:22 USDCAD stale quote (139s old), skipped
+2026-09-29 20:57:22 NZDUSD stale quote (139s old), skipped
