@@ -892,3 +892,4 @@
 2026-09-29 22:04:43 XAGUSD stale quote (3880s old), skipped
 2026-09-29 22:04:54 XAUUSD stale quote (3891s old), skipped
 2026-09-29 22:04:54 XAGUSD stale quote (3891s old), skipped
+2026-09-29 22:38:44 EURUSD fetch failed: Remote end closed connection without response
