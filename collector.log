@@ -32,3 +32,12 @@
 2026-09-29 09:18:23 NZDUSD fetch failed: <urlopen error Remote end closed connection without response>
 2026-09-29 10:04:56 GBPUSD fetch failed: Remote end closed connection without response
 2026-09-29 10:21:38 EURUSD fetch failed: Remote end closed connection without response
+2026-09-29 11:18:31 XAUUSD fetch failed: <urlopen error Remote end closed connection without response>
+2026-09-29 11:18:31 XAGUSD fetch failed: <urlopen error Remote end closed connection without response>
+2026-09-29 11:18:31 EURUSD fetch failed: <urlopen error Remote end closed connection without response>
+2026-09-29 11:18:31 GBPUSD fetch failed: <urlopen error [Errno 104] Connection reset by peer>
+2026-09-29 11:18:31 USDJPY fetch failed: <urlopen error [Errno 111] Connection refused>
+2026-09-29 11:18:31 USDCHF fetch failed: <urlopen error [Errno 111] Connection refused>
+2026-09-29 11:18:31 AUDUSD fetch failed: <urlopen error [Errno 111] Connection refused>
+2026-09-29 11:18:31 USDCAD fetch failed: <urlopen error [Errno 111] Connection refused>
+2026-09-29 11:18:31 NZDUSD fetch failed: <urlopen error [Errno 111] Connection refused>
