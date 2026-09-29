@@ -42,3 +42,4 @@
 2026-09-29 11:18:31 USDCAD fetch failed: <urlopen error [Errno 111] Connection refused>
 2026-09-29 11:18:31 NZDUSD fetch failed: <urlopen error [Errno 111] Connection refused>
 2026-09-29 11:27:36 NZDUSD fetch failed: Remote end closed connection without response
+2026-09-29 12:03:22 EURUSD fetch failed: Remote end closed connection without response
