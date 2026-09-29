@@ -208,3 +208,4 @@
 2026-09-29 16:50:11 AUDUSD fetch failed: <urlopen error timed out>
 2026-09-29 16:50:11 USDCAD fetch failed: <urlopen error timed out>
 2026-09-29 16:50:11 NZDUSD fetch failed: <urlopen error timed out>
+2026-09-29 17:01:57 XAUUSD fetch failed: The read operation timed out
