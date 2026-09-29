@@ -89,6 +89,12 @@ def main():
         return
     st = load_state()
     st["runs"] = st.get("runs", 0) + 1
+    # v2.2 (audit C03 migration): declare the midpoint->bid basis transition.
+    # Candles with t < basis_since were aggregated from midpoints; everything
+    # at/after it is bid-basis. The 6h rolling window ages the midpoint segment
+    # out on its own — history is never silently mixed without a marker.
+    if "basis_since" not in st:
+        st["basis_since"] = int(time.time() * 1000)
     syms = st.setdefault("symbols", {})
 
     for p in range(SUBPOLLS):
@@ -131,7 +137,8 @@ def main():
             continue
         out = s["hist"] + ([s["cur"]] if s["cur"] else [])
         atomic_write(os.path.join(BASE, f"{sym}_m1.json"),
-                     {"basis": "bid", "source": "swissquote", "candles": out})
+                     {"basis": "bid", "source": "swissquote",
+                      "basis_since": st["basis_since"], "candles": out})
     atomic_write(STATE, st)
 
     if st["runs"] % PUSH_EVERY == 0:
