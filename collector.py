@@ -69,7 +69,9 @@ def fetch_quote(instrument):
     ts = arr[0].get("ts")
     if bid is None or ask is None or ts is None:
         return None
-    return (bid + ask) / 2.0, int(ts)
+    # v2.1 (audit C03): candles aggregate the BID (broker-chart parity),
+    # never the midpoint.
+    return float(bid), int(ts)
 
 def _one(item):
     sym, instr = item
@@ -99,7 +101,7 @@ def main():
                 continue
             if q is None:
                 continue
-            mid, ts = q
+            bidpx, ts = q  # v2.1: bid-basis (audit C03), not midpoint
             if now_ms - ts > STALE_MS:
                 log(f"{sym} stale quote ({(now_ms - ts)//1000}s old), skipped")
                 continue
@@ -107,27 +109,29 @@ def main():
             s = syms.setdefault(sym, {"cur": None, "hist": []})
             cur = s["cur"]
             if cur and cur["t"] == minute:
-                if mid > cur["h"]:
-                    cur["h"] = mid
-                if mid < cur["l"]:
-                    cur["l"] = mid
-                cur["c"] = mid
+                if bidpx > cur["h"]:
+                    cur["h"] = bidpx
+                if bidpx < cur["l"]:
+                    cur["l"] = bidpx
+                cur["c"] = bidpx
                 cur["n"] = cur.get("n", 1) + 1
             else:
                 if cur:
                     s["hist"].append(cur)
                     s["hist"] = s["hist"][-HISTORY_MAX:]
-                s["cur"] = {"t": minute, "o": mid, "h": mid, "l": mid, "c": mid, "n": 1}
+                s["cur"] = {"t": minute, "o": bidpx, "h": bidpx, "l": bidpx, "c": bidpx, "n": 1}
         if p < SUBPOLLS - 1:
             time.sleep(SUBPOLL_GAP)
 
-    # publish files: history + forming candle
+    # publish files: history + forming candle.
+    # v2.1: envelope carries the candle contract (basis/source) per audit.
     for sym in SYMBOLS:
         s = syms.get(sym)
         if not s:
             continue
         out = s["hist"] + ([s["cur"]] if s["cur"] else [])
-        atomic_write(os.path.join(BASE, f"{sym}_m1.json"), out)
+        atomic_write(os.path.join(BASE, f"{sym}_m1.json"),
+                     {"basis": "bid", "source": "swissquote", "candles": out})
     atomic_write(STATE, st)
 
     if st["runs"] % PUSH_EVERY == 0:
