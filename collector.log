@@ -1733,3 +1733,12 @@
 2026-09-30 22:04:48 XAGUSD stale quote (3885s old), skipped
 2026-09-30 22:04:58 XAUUSD stale quote (3895s old), skipped
 2026-09-30 22:04:58 XAGUSD stale quote (3895s old), skipped
+2026-09-30 23:00:42 XAUUSD fetch failed: Remote end closed connection without response
+2026-09-30 23:00:42 XAGUSD fetch failed: Remote end closed connection without response
+2026-09-30 23:00:42 EURUSD fetch failed: Remote end closed connection without response
+2026-09-30 23:00:42 GBPUSD fetch failed: Remote end closed connection without response
+2026-09-30 23:00:42 USDJPY fetch failed: Remote end closed connection without response
+2026-09-30 23:00:42 USDCHF fetch failed: Remote end closed connection without response
+2026-09-30 23:00:42 AUDUSD fetch failed: Remote end closed connection without response
+2026-09-30 23:00:42 USDCAD fetch failed: Remote end closed connection without response
+2026-09-30 23:00:42 NZDUSD fetch failed: Remote end closed connection without response
