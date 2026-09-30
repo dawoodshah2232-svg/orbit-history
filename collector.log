@@ -969,3 +969,14 @@
 2026-09-30 18:47:27 XAGUSD fetch failed: Remote end closed connection without response
 2026-09-30 18:59:29 GBPUSD fetch failed: Remote end closed connection without response
 2026-09-30 19:21:17 XAGUSD fetch failed: Remote end closed connection without response
+2026-09-30 19:41:41 XAUUSD fetch failed: Remote end closed connection without response
+2026-09-30 19:41:58 XAUUSD fetch failed: <urlopen error Remote end closed connection without response>
+2026-09-30 19:41:58 XAGUSD fetch failed: <urlopen error Remote end closed connection without response>
+2026-09-30 19:41:58 EURUSD fetch failed: <urlopen error Remote end closed connection without response>
+2026-09-30 19:41:58 GBPUSD fetch failed: <urlopen error Remote end closed connection without response>
+2026-09-30 19:41:58 USDJPY fetch failed: <urlopen error [Errno 104] Connection reset by peer>
+2026-09-30 19:41:58 USDCHF fetch failed: <urlopen error [Errno 104] Connection reset by peer>
+2026-09-30 19:41:58 AUDUSD fetch failed: <urlopen error Remote end closed connection without response>
+2026-09-30 19:41:58 USDCAD fetch failed: <urlopen error [Errno 104] Connection reset by peer>
+2026-09-30 19:41:58 NZDUSD fetch failed: <urlopen error [Errno 104] Connection reset by peer>
+2026-09-30 19:44:23 USDCHF fetch failed: Remote end closed connection without response
