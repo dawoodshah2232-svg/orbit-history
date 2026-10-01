@@ -1767,3 +1767,9 @@
 2026-10-01 04:59:02 USDCAD fetch failed after retries: <urlopen error [Errno 111] Connection refused>
 2026-10-01 04:59:02 NZDUSD fetch failed after retries: <urlopen error [Errno 111] Connection refused>
 2026-10-01 05:00:07 AUDUSD future quote (5006ms), skipped
+2026-10-01 05:16:38 AUDUSD future quote (5138ms), skipped
+2026-10-01 05:17:19 USDCAD future quote (5268ms), skipped
+2026-10-01 05:17:19 NZDUSD future quote (5215ms), skipped
+2026-10-01 05:17:41 AUDUSD future quote (5756ms), skipped
+2026-10-01 05:17:41 USDCAD future quote (5714ms), skipped
+2026-10-01 05:17:41 NZDUSD future quote (5746ms), skipped
