@@ -1763,3 +1763,7 @@
 2026-10-01 02:19:49 NZDUSD fetch failed: <urlopen error [Errno 104] Connection reset by peer>
 2026-10-01 02:20:57 XAGUSD fetch failed: Remote end closed connection without response
 2026-10-01 04:25:08 AUDUSD fetch failed: Remote end closed connection without response
+2026-10-01 04:59:02 AUDUSD fetch failed after retries: <urlopen error [Errno 111] Connection refused>
+2026-10-01 04:59:02 USDCAD fetch failed after retries: <urlopen error [Errno 111] Connection refused>
+2026-10-01 04:59:02 NZDUSD fetch failed after retries: <urlopen error [Errno 111] Connection refused>
+2026-10-01 05:00:07 AUDUSD future quote (5006ms), skipped
