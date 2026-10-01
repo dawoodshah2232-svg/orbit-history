@@ -15,6 +15,7 @@ v3 reliability changes:
 """
 import json
 import os
+import subprocess
 import time
 import urllib.error
 import urllib.request
@@ -50,6 +51,59 @@ def log(msg):
             f.write(line + "\n")
     except OSError:
         pass
+
+
+def _git(*args):
+    """Run git in BASE, returning (rc, combined output)."""
+    p = subprocess.run(
+        ["git", *args],
+        cwd=BASE,
+        capture_output=True,
+        text=True,
+        timeout=60,
+    )
+    return p.returncode, (p.stdout or "") + (p.stderr or "")
+
+
+def _commit_and_push():
+    """Commit tick JSONs and push gh-pages. Detects push failures and
+    self-heals non-fast-forward rejections via fetch+rebase. Never
+    force-pushes; failures are logged loudly so the cron alert fires."""
+    rc, _ = _git("add", "-A")
+    if rc != 0:
+        log("PUSH FAILED: git add exited nonzero")
+        return False
+    _git(
+        "-c", "user.email=relay@orbithub",
+        "-c", "user.name=orbithistory-relay",
+        "commit", "-qm", "relay v3 stable ticks",
+    )  # may be nothing-to-commit; harmless either way
+
+    rc, out = _git("push", "origin", "gh-pages")
+    if rc == 0:
+        return True
+
+    log(f"PUSH FAILED (rc={rc}): {out.strip()[:300]}")
+    if "non-fast-forward" in out or "rejected" in out or "fetch first" in out:
+        log("push rejected: fetching and rebasing onto origin/gh-pages")
+        rc, out = _git("fetch", "origin", "gh-pages")
+        if rc != 0:
+            log(f"PUSH FAILED: fetch exited {rc}")
+            return False
+        rc, out = _git("rebase", "origin/gh-pages")
+        if rc != 0:
+            _git("rebase", "--abort")
+            log(f"PUSH FAILED: rebase conflicted, aborted; manual fix needed: {out.strip()[:200]}")
+            return False
+        rc, out = _git("push", "origin", "gh-pages")
+        if rc == 0:
+            log("push recovered via rebase")
+            return True
+        log(f"PUSH FAILED after rebase (rc={rc}): {out.strip()[:300]}")
+        return False
+
+    log("PUSH FAILED: not a rejection; leaving for next run")
+    return False
 
 
 def atomic_write(path, data):
@@ -212,14 +266,7 @@ def main():
     atomic_write(STATE, st)
 
     if st["runs"] % PUSH_EVERY == 0:
-        rc = os.system(
-            f"cd {BASE} && git add -A && "
-            f"git -c user.email=relay@orbithub -c user.name=orbithistory-relay "
-            f"commit -qm 'relay v3 stable ticks' 2>/dev/null; "
-            f"git push -q origin gh-pages 2>&1 | tail -1"
-        )
-        if rc != 0:
-            log(f"push exited {rc}")
+        _commit_and_push()
 
 
 if __name__ == "__main__":
