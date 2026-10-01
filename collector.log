@@ -2389,3 +2389,21 @@
 2026-10-01 20:51:58 NZDUSD future quote (5228ms), skipped
 2026-10-01 20:52:30 USDCAD future quote (5102ms), skipped
 2026-10-01 20:52:41 NZDUSD future quote (5182ms), skipped
+2026-10-01 20:55:56 XAUUSD stale quote (51s old), skipped
+2026-10-01 20:55:56 XAGUSD stale quote (51s old), skipped
+2026-10-01 20:55:56 EURUSD stale quote (51s old), skipped
+2026-10-01 20:55:56 GBPUSD stale quote (51s old), skipped
+2026-10-01 20:55:56 USDJPY stale quote (51s old), skipped
+2026-10-01 20:55:56 USDCHF stale quote (51s old), skipped
+2026-10-01 20:55:56 AUDUSD stale quote (51s old), skipped
+2026-10-01 20:55:56 USDCAD stale quote (51s old), skipped
+2026-10-01 20:55:56 NZDUSD stale quote (51s old), skipped
+2026-10-01 20:56:06 XAUUSD stale quote (61s old), skipped
+2026-10-01 20:56:06 XAGUSD stale quote (61s old), skipped
+2026-10-01 20:56:06 EURUSD stale quote (61s old), skipped
+2026-10-01 20:56:06 GBPUSD stale quote (61s old), skipped
+2026-10-01 20:56:06 USDJPY stale quote (61s old), skipped
+2026-10-01 20:56:06 USDCHF stale quote (61s old), skipped
+2026-10-01 20:56:06 AUDUSD stale quote (61s old), skipped
+2026-10-01 20:56:06 USDCAD stale quote (61s old), skipped
+2026-10-01 20:56:06 NZDUSD stale quote (61s old), skipped
