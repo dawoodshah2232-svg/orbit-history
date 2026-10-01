@@ -2374,3 +2374,11 @@
 2026-10-01 20:02:03 NZDUSD future quote (5123ms), skipped
 2026-10-01 20:12:13 NZDUSD future quote (5131ms), skipped
 2026-10-01 20:15:19 AUDUSD future quote (5106ms), skipped
+2026-10-01 20:29:19 GBPUSD fetch failed after retries: <urlopen error [Errno 111] Connection refused>
+2026-10-01 20:29:19 USDJPY fetch failed after retries: <urlopen error [Errno 111] Connection refused>
+2026-10-01 20:29:19 USDCHF fetch failed after retries: <urlopen error [Errno 111] Connection refused>
+2026-10-01 20:29:19 AUDUSD fetch failed after retries: <urlopen error [Errno 111] Connection refused>
+2026-10-01 20:29:19 USDCAD fetch failed after retries: <urlopen error [Errno 111] Connection refused>
+2026-10-01 20:29:19 NZDUSD fetch failed after retries: <urlopen error [Errno 111] Connection refused>
+2026-10-01 20:30:33 NZDUSD future quote (5402ms), skipped
+2026-10-01 20:30:44 NZDUSD future quote (5053ms), skipped
