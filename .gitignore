@@ -1,2 +1,6 @@
 __pycache__/
 *.pyc
+collector.log
+collector.lock
+state.json
+collector.py
